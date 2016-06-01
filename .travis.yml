@@ -1,0 +1,15 @@
+sudo: true
+services:
+    - docker
+
+before_install:
+    - docker info
+    - docker version
+
+    - docker build -t json-server .
+
+script:
+    - docker run -i json-server  > result  
+
+    - echo "==> Validating the test results..."
+    - sh -c "[ -s result ]"
