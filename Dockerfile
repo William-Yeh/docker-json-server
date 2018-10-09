@@ -4,18 +4,23 @@
 #
 # Reference:  https://github.com/typicode/json-server
 #
-# Version     1.0
+# Version     1.1
 #
 
 # pull base image
-FROM williamyeh/ansible:mini-alpine3
-#FROM scratch
-#FROM busybox
-#FROM progrium/busybox
-#FROM alpine:3.3
-#FROM debian:jessie
+FROM node:10-alpine
 
 MAINTAINER William Yeh <william.pjyeh@gmail.com>
+
+
+RUN \
+    echo "==> Install app..."                && \
+    npm install -g --production json-server  && \
+    \
+    \
+    echo "==> Remove unused temp..."         && \
+    rm -rf /root/.npm                  \
+           /usr/lib/node_modules/npm
 
 
 # configure

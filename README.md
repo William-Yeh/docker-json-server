@@ -1,7 +1,7 @@
 Dockerized JSON Server
 ============
 
-[![Build Status](https://travis-ci.org/William-Yeh/docker-json-server.svg?branch=master)](https://travis-ci.org/William-Yeh/docker-json-server)
+[![Circle CI](https://circleci.com/gh/William-Yeh/docker-json-server.svg?style=shield)](https://circleci.com/gh/William-Yeh/docker-json-server) [![Build Status](https://travis-ci.org/William-Yeh/docker-json-server.svg?branch=master)](https://travis-ci.org/William-Yeh/docker-json-server)
 
 
 ## Summary
@@ -18,7 +18,7 @@ This docker image contains the following software stack:
 
 - Alpine 3
 
-- Node.js
+- Node.js 10
 
 - JSON Server
 
@@ -27,12 +27,13 @@ Total image size is less than 30 MB.
 
 ### Dependencies
 
-- [`williamyeh/ansible:mini-alpine3`](https://hub.docker.com/r/williamyeh/ansible/)
+- [`node:10-alpine`](https://hub.docker.com/_/node/)
 
 
 ### History
 
 - 1.0 - Initial release.
+- 1.1 - Updated base image and json-server version.
 
 
 ## Installation
