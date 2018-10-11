@@ -4,7 +4,7 @@
 #
 # Reference:  https://github.com/typicode/json-server
 #
-# Version     1.1
+# Version     1.2
 #
 
 # pull base image
@@ -29,5 +29,5 @@ VOLUME [ "/data" ]
 WORKDIR /data
 
 # Define default command.
-ENTRYPOINT ["json-server"]
+ENTRYPOINT ["json-server", "--host", "0.0.0.0"]
 CMD ["--help"]

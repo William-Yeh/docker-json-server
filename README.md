@@ -34,6 +34,7 @@ Total image size is less than 30 MB.
 
 - 1.0 - Initial release.
 - 1.1 - Updated base image and json-server version.
+- 1.1.1 - Add '--host' cli arguments for convenience.
 
 
 ## Installation
